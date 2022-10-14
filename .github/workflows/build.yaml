@@ -1,0 +1,17 @@
+name: build
+
+on: push
+
+jobs:
+  build:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: amd64
+      - run: |
+          cmake -S. -Bbuild
+          cmake --build build
+          build/App.exe
+          type result.txt
