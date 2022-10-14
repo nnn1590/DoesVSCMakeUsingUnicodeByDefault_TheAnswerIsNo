@@ -13,5 +13,5 @@ jobs:
       - run: |
           cmake -S. -Bbuild
           cmake --build build
-          build/App.exe
+          build/bin/App.exe
           type result.txt
