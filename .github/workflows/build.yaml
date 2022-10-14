@@ -13,6 +13,5 @@ jobs:
       - run: |
           cmake -S. -Bbuild
           cmake --build build
-          Get-ChildItem -Recurse
-          build/bin/App.exe
+          build/bin/Debug/App.exe
           type result.txt
